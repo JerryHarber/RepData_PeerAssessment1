@@ -5,7 +5,7 @@ output: html_document
 ---
 
 
-### Date Mon May  22  9:39:46 AM 2017  
+### Date Mon May  22  10:43:05 AM 2017  
 
 # Introduction  
 ## This assignment makes use of data from a personal activity monitoring device.
@@ -48,6 +48,15 @@ hist(p1$Total.Steps, xlab = "Total number of steps", main = paste("Histogram of 
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
+```r
+dev.off()
+```
+
+```
+## null device 
+##           1
+```
+# See plot1.png
 
 ## 3.	Mean and median number of steps taken each day. Exclude values that are NA.
 
@@ -96,6 +105,8 @@ dev.off()
 ## null device 
 ##           1
 ```
+# See plot2.png
+
 ## Determine the time interval for the maximum for the average number of steps. The interval with maximum number of steps is:  835 
 
 ```r
@@ -131,3 +142,5 @@ dev.off()
 ## null device 
 ##           1
 ```
+# See plot3.png
+

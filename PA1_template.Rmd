@@ -35,8 +35,9 @@ p1 <- rename(p1, Date = Group.1)
 p1 <- rename(p1, Total.Steps = x)
 p1[1:5,]
 hist(p1$Total.Steps, xlab = "Total number of steps", main = paste("Histogram of total number of steps taken per day"))
+dev.off()
 ```
-
+# See plot1.png
 
 ## 3.	Mean and median number of steps taken each day. Exclude values that are NA.
 ```{r}
@@ -56,7 +57,9 @@ p2 <- rename(p2, Time.Interval = Group.1)
 p2 <- rename(p2, Mean.Steps = x)
 plot(p2, type = "l")
 dev.off()
-```  
+```
+# See plot2.png
+
 ## Determine the time interval for the maximum for the average number of steps. The interval with maximum number of steps is:  835 
 ```{r}
 a <- p2[order(p2$Mean.Steps), ]
@@ -75,3 +78,5 @@ p2 <- rename(p2, Mean.Steps = x)
 xyplot(Mean.Steps ~ Interval | Day.Of.Week, data = p2, type = "l", layout = c(2, 1), main = "Comparison of time intervals by day of the week")
 dev.off()
 ```
+# See plot3.png
+
